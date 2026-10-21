@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
-import { Award, Compass } from "lucide-react";
 
 // Cheetah in Serengeti NP — photo by Giles Laurent, CC BY-SA 4.0 (Wikimedia Commons)
 const REAL_WELCOME_IMAGE = "/images/welcome-cheetah.jpg";
@@ -44,23 +43,13 @@ const Welcome = () => {
 
           {/* Feature Highlights */}
           <div className="grid grid-cols-2 gap-4 pt-2">
-            <div className="flex items-center gap-3 bg-white p-3 rounded-2xl border border-gray-100 shadow-sm">
-              <div className="p-2 bg-[#D4AF37]/10 text-[#D4AF37] rounded-xl">
-                <Compass size={20} />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-[#1C2826]">{t("Bilingual Guides", "Guide Bilingue")}</p>
-                <p className="text-[11px] text-gray-500">{t("English & Italian", "Inglese e Italiano")}</p>
-              </div>
+            <div className="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm space-y-0.5">
+              <p className="text-xs font-extrabold text-[#1C2826] uppercase tracking-wider">{t("Bilingual Guides", "Guide Bilingue")}</p>
+              <p className="text-xs text-gray-500 font-light">{t("English & Italian", "Inglese e Italiano")}</p>
             </div>
-            <div className="flex items-center gap-3 bg-white p-3 rounded-2xl border border-gray-100 shadow-sm">
-              <div className="p-2 bg-emerald-50 text-emerald-600 rounded-xl">
-                <Award size={20} />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-[#1C2826]">{t("100% Reliable", "100% Affidabile")}</p>
-                <p className="text-[11px] text-gray-500">{t("Flight delay tracking", "Monitoraggio voli")}</p>
-              </div>
+            <div className="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm space-y-0.5">
+              <p className="text-xs font-extrabold text-[#1C2826] uppercase tracking-wider">{t("100% Reliable", "100% Affidabile")}</p>
+              <p className="text-xs text-gray-500 font-light">{t("Flight delay tracking", "Monitoraggio voli")}</p>
             </div>
           </div>
 

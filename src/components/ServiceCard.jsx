@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { CheckCircle2, XCircle, Calendar, Users, Baby, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WHATSAPP_PHONE = "255777000000";
@@ -47,10 +46,9 @@ export default function ServiceCard({ service, lang }) {
               {service.duration}
             </span>
 
-            {/* Icon Pill - Bottom Left */}
-            <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-[#1C2826]/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-white text-xs font-medium">
-              <span>{service.icon}</span>
-              <span className="text-[11px] text-[#D4AF37] font-semibold">{lang === "en" ? "Zan Lungo Tour" : "Tour Zan Lungo"}</span>
+            {/* Pill - Bottom Left */}
+            <div className="absolute bottom-3 left-3 bg-[#1C2826]/85 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-xs font-medium">
+              <span className="text-[11px] text-[#D4AF37] font-bold uppercase tracking-wider">{lang === "en" ? "Zan Lungo Tour" : "Tour Zan Lungo"}</span>
             </div>
           </div>
         ) : null}
@@ -59,9 +57,6 @@ export default function ServiceCard({ service, lang }) {
         <div className="p-5 space-y-4">
           <div className="flex justify-between items-start gap-3">
             <div className="flex items-start gap-2.5">
-              {(!service.image || imgError) && (
-                <span className="text-2xl leading-none mt-0.5">{service.icon}</span>
-              )}
               <h3 className="font-bold text-base leading-tight text-[#1C2826] group-hover:text-[#2A624C] transition-colors">
                 {service.name}
               </h3>
@@ -91,16 +86,16 @@ export default function ServiceCard({ service, lang }) {
           {/* Included / Excluded */}
           <div className="grid grid-cols-2 gap-3 pt-3 border-t border-gray-100 text-[11px]">
             <div>
-              <span className="font-bold text-emerald-600 flex items-center gap-1 mb-1.5">
-                <CheckCircle2 size={12} /> {lang === "en" ? "Included" : "Incluso"}
+              <span className="font-bold text-emerald-600 block mb-1 text-[11px] uppercase tracking-wider">
+                {lang === "en" ? "Included" : "Incluso"}
               </span>
               {service.included.map((inc, i) => (
                 <p key={i} className="text-gray-500 font-light leading-snug mb-1">• {inc}</p>
               ))}
             </div>
             <div>
-              <span className="font-bold text-rose-500 flex items-center gap-1 mb-1.5">
-                <XCircle size={12} /> {lang === "en" ? "Excluded" : "Escluso"}
+              <span className="font-bold text-rose-500 block mb-1 text-[11px] uppercase tracking-wider">
+                {lang === "en" ? "Excluded" : "Escluso"}
               </span>
               {service.excluded.map((exc, i) => (
                 <p key={i} className="text-gray-500 font-light leading-snug mb-1">• {exc}</p>
@@ -114,8 +109,8 @@ export default function ServiceCard({ service, lang }) {
       <div className="p-4 bg-gray-50/80 border-t border-gray-100 space-y-3">
         {/* Hotel / Pickup Location */}
         <div>
-          <label className="flex items-center gap-1 text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-1">
-            <MapPin size={10} /> {lang === "en" ? "Hotel / Pickup Location" : "Hotel / Luogo di Partenza"}
+          <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-1">
+            {lang === "en" ? "Hotel / Pickup Location" : "Hotel / Luogo di Partenza"}
           </label>
           <input
             type="text"
@@ -129,8 +124,8 @@ export default function ServiceCard({ service, lang }) {
         {/* Date + Guests */}
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1">
-            <label className="flex items-center gap-1 text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-1">
-              <Calendar size={10} /> {lang === "en" ? "Date" : "Data"}
+            <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-1">
+              {lang === "en" ? "Date" : "Data"}
             </label>
             <input
               type="date"
@@ -140,8 +135,8 @@ export default function ServiceCard({ service, lang }) {
             />
           </div>
           <div>
-            <label className="flex items-center gap-1 text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-1">
-              <Users size={10} /> {lang === "en" ? "Adults" : "Adulti"}
+            <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-1">
+              {lang === "en" ? "Adults" : "Adulti"}
             </label>
             <input
               type="number"
@@ -152,8 +147,8 @@ export default function ServiceCard({ service, lang }) {
             />
           </div>
           <div>
-            <label className="flex items-center gap-1 text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-1">
-              <Baby size={10} /> {lang === "en" ? "Children" : "Bambini"}
+            <label className="block text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-1">
+              {lang === "en" ? "Children" : "Bambini"}
             </label>
             <input
               type="number"
