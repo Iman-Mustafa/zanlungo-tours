@@ -1,217 +1,130 @@
-import {
-  MapPin,
-  Phone,
-  Mail,
-} from "lucide-react";
-import LogoLight from "../assets/images/logo-light.webp";
-import { FaWhatsapp, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+﻿import { MapPin, Phone, Mail } from "lucide-react";
+import { FaWhatsapp, FaFacebook, FaInstagram, FaTripadvisor } from "react-icons/fa";
+import { SiGooglemaps } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
+
+const WHATSAPP_PHONE = "255777000000";
+const WHATSAPP_MSG = "Hello Zan Lungo Tours! I am checking your website and I would like to inquire about your packages.";
 
 const Footer = () => {
+  const { lang, t } = useLanguage();
+
   return (
-    <footer className="bg-[#2A624C]/90 text-white relative overflow-hidden">
-      {/* Background Design Elements */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <svg
-          className="absolute bottom-0 left-0 h-64 w-64"
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill="#FFFFFF"
-            d="M39.9,-51.2C50.1,-39.4,56.2,-25.7,59.6,-10.9C63,3.9,63.7,19.8,57.1,31.5C50.5,43.2,36.5,50.7,21.7,56.6C6.9,62.5,-8.6,66.8,-23.3,63.6C-38,60.4,-51.8,49.8,-59.8,36C-67.8,22.2,-69.9,5.2,-66.1,-10.1C-62.3,-25.4,-52.6,-39,-40.2,-50.8C-27.8,-62.5,-13.9,-72.5,0.4,-73.1C14.8,-73.6,29.6,-64.9,39.9,-51.2Z"
-            transform="translate(100 100)"
-          />
-        </svg>
-        <svg
-          className="absolute top-0 right-0 h-64 w-64"
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill="#FFFFFF"
-            d="M47.6,-57.3C57.9,-48.3,60.2,-29.8,62.1,-12.2C64,5.5,65.6,22.2,58.8,34.8C52,47.4,36.8,55.8,20.4,62.4C4.1,69,-13.4,73.8,-29,69.9C-44.5,66.1,-58.2,53.6,-65.3,38.4C-72.5,23.1,-73.2,5.1,-69.7,-11.3C-66.3,-27.8,-58.8,-42.6,-46.5,-51.4C-34.2,-60.2,-17.1,-62.9,0.6,-63.7C18.3,-64.4,36.7,-63.3,47.6,-57.3Z"
-            transform="translate(100 100)"
-          />
+    <footer className="bg-[#1C2826] text-white relative overflow-hidden border-t border-[#D4AF37]/10">
+      {/* Background accents */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <svg className="absolute bottom-0 left-0 h-64 w-64" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#D4AF37" d="M39.9,-51.2C50.1,-39.4,56.2,-25.7,59.6,-10.9C63,3.9,63.7,19.8,57.1,31.5C50.5,43.2,36.5,50.7,21.7,56.6C6.9,62.5,-8.6,66.8,-23.3,63.6C-38,60.4,-51.8,49.8,-59.8,36C-67.8,22.2,-69.9,5.2,-66.1,-10.1C-62.3,-25.4,-52.6,-39,-40.2,-50.8C-27.8,-62.5,-13.9,-72.5,0.4,-73.1C14.8,-73.6,29.6,-64.9,39.9,-51.2Z" transform="translate(100 100)" />
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
-          {/* Logo & About */}
-          <div>
-            <img
-              src={LogoLight}
-              alt="Logo | TourCraft Limited"
-              className="p-1 rounded-lg mb-4"
-              width={200}
-              height={250}
-            />
-            <p className="mb-4 text-gray-200">
-              Experience the wild like never before with our curated safari
-              adventures that connect you with nature.
+      <div className="container mx-auto px-4 py-16 relative z-10 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+          {/* Brand */}
+          <div className="space-y-4">
+            <div className="text-xl font-black tracking-wider text-[#D4AF37]">
+              ZAN LUNGO <span className="text-white font-light text-xs block tracking-widest">TOURS & SAFARIS</span>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed font-light">
+              {t(
+                "Your trusted local partner for premium airport transfers, Zanzibar island excursions, and iconic mainland Tanzania wildlife safaris.",
+                "Il vostro partner locale di fiducia per trasferimenti premium, escursioni a Zanzibar e indimenticabili safari in Tanzania."
+              )}
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/"
-                aria-label="Facebook"
-                className="text-white hover:text-safari-gold transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebook size={30} />
+            {/* Social Links */}
+            <div className="flex items-center gap-4 pt-2">
+              <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
+                <FaFacebook size={22} />
               </a>
-              <a
-                href="https://www.instagram.com/"
-                aria-label="Instagram"
-                className="text-white hover:text-safari-gold transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram size={30} />
+              <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
+                <FaInstagram size={22} />
               </a>
-              <a
-                href="https://www.twitter.com/"
-                aria-label="Twitter"
-                className="text-white hover:text-safari-gold transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter size={30} />
+              <a href="https://www.tripadvisor.com/" aria-label="TripAdvisor" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
+                <FaTripadvisor size={22} />
+              </a>
+              <a href="https://maps.google.com/?q=Stone+Town+Zanzibar" aria-label="Google Maps" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
+                <SiGooglemaps size={20} />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="">
-            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/"
-                  className="text-gray-200 hover:text-white transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className="text-gray-200 hover:text-white transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className="text-gray-200 hover:text-white transition-colors"
-                >
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className="text-gray-200 hover:text-white transition-colors"
-                >
-                  Testimonials
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className="text-gray-200 hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Popular Tours */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Popular Tours</h3>
-            <ul className="space-y-2">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-6 border-b border-gray-800 pb-2">
+              {t("Quick Links", "Link Rapidi")}
+            </h3>
+            <ul className="space-y-3 text-sm font-light text-gray-400">
+              <li><Link to="/" className="hover:text-[#D4AF37] transition-colors">{t("Home", "Home")}</Link></li>
+              <li><Link to="/about" className="hover:text-[#D4AF37] transition-colors">{t("About Us", "Chi Siamo")}</Link></li>
+              <li><Link to="/services" className="hover:text-[#D4AF37] transition-colors">{t("Our Services", "Servizi")}</Link></li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-200 hover:text-white transition-colors"
-                >
-                  3 Days Tour
+                <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
+                  <FaTripadvisor size={13} /> {t("TripAdvisor Reviews", "Recensioni TripAdvisor")}
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-200 hover:text-white transition-colors"
-                >
-                  4 Days Tour
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-200 hover:text-white transition-colors"
-                >
-                  5 Days Tour
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-200 hover:text-white transition-colors"
-                >
-                  14 Days Tour
+                <a href="https://maps.google.com/?q=Stone+Town+Zanzibar" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
+                  <SiGooglemaps size={12} /> {t("Find Us on Maps", "Trovaci su Maps")}
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Services */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin className="mr-2 h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span>
-                  Savannah Horizons Ltd. Ngorongoro Conservation Area Arusha
-                  Region Tanzania, East Africa
-                </span>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-6 border-b border-gray-800 pb-2">
+              {t("Our Services", "I Nostri Servizi")}
+            </h3>
+            <ul className="space-y-3 text-sm font-light text-gray-400">
+              <li><Link to="/services" className="hover:text-[#D4AF37] transition-colors">{t("Airport & Port Transfers", "Trasferimenti Aeroporto & Porto")}</Link></li>
+              <li><Link to="/services" className="hover:text-[#D4AF37] transition-colors">{t("Zanzibar Day Tours", "Tour Giornalieri Zanzibar")}</Link></li>
+              <li><Link to="/services" className="hover:text-[#D4AF37] transition-colors">{t("Tanzania Fly-In Safaris", "Safari in Volo Tanzania")}</Link></li>
+              <li><Link to="/services" className="hover:text-[#D4AF37] transition-colors">{t("Multi-Day Safari Packages", "Pacchetti Safari Multi-Giorno")}</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-6 border-b border-gray-800 pb-2">
+              {t("Contact Us", "Contattaci")}
+            </h3>
+            <ul className="space-y-4 text-sm font-light text-gray-400">
+              <li className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                <span>Stone Town, Zanzibar,<br />Tanzania, East Africa</span>
               </li>
-              <li className="flex items-center">
-                <Phone className="mr-2 h-5 w-5 flex-shrink-0" />
-                <a href="tel:+919876543210" className="hover:underline">
-                  +91 98765 43210
-                </a>
+              <li className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-[#D4AF37] flex-shrink-0" />
+                <a href="tel:+255777000000" className="hover:text-[#D4AF37] transition-colors">+255 777 000 000</a>
               </li>
-              <li className="flex items-center">
-                <Mail className="mr-2 h-5 w-5 flex-shrink-0" />
-                <a href="mailto:info@tourcraft.com" className="hover:underline">
-                  info@tourcraft.com
-                </a>
+              <li className="flex items-center gap-3">
+                <Mail className="h-4 w-4 text-[#D4AF37] flex-shrink-0" />
+                <a href="mailto:info@zanlungotours.com" className="hover:text-[#D4AF37] transition-colors break-all">info@zanlungotours.com</a>
               </li>
-              <li className="text-white/90 flex mt-2 items-center">
-                <FaWhatsapp className="w-7 h-7 text-white" />
-                <a href="https://wa.me/+919876543210" className="ml-2 hover:underline">
-                  +91 98765 43210
+              <li>
+                <a
+                  href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_MSG)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider transition w-full mt-1 shadow-sm"
+                >
+                  <FaWhatsapp size={15} />
+                  {t("WhatsApp Chat", "Chat WhatsApp")}
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-12 pt-6 flex flex-wrap justify-between items-center text-sm text-gray-300">
-          <p>
-            &copy; {new Date().getFullYear()} TourCraft. All rights reserved.
-          </p>
-          <Link
-            to="#"
-            className="hover:text-white transition-colors"
-          >
-            Privacy Policy
-          </Link>
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+          <p>&copy; {new Date().getFullYear()} Zan Lungo Tour and Safari. {t("All rights reserved.", "Tutti i diritti riservati.")}</p>
+          <div className="flex gap-6">
+            <Link to="#" className="hover:text-white transition-colors">{t("Privacy Policy", "Privacy Policy")}</Link>
+            <Link to="#" className="hover:text-white transition-colors">{t("Terms of Service", "Termini di Servizio")}</Link>
+          </div>
         </div>
       </div>
     </footer>

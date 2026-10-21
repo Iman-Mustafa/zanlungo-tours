@@ -1,49 +1,37 @@
-import ThreeDays from "../src/assets/images/3-days.webp";
-import FourDays from "../src/assets/images/4-days.webp";
-import FiveDays from "../src/assets/images/5-days.webp";
-import FourteenDays from "../src/assets/images/14-days.webp";
-
 export const itineraryData = {
-  location: {
-    "3-days": {
-      title: "3 Days Tour",
-    },
-    "4-days": {
-      title: "4 Days Tour",
-    },
-    "5-days": {
-      title: "5 Days Tour",
-    },
-    "14-days": {
-      title: "14 Days Tour",
-    },
+  Zanzibar: {
+    "day-tours": { title: "Zanzibar Day Tours" },
+    "airport-transfers": { title: "Airport & Port Transfers" },
+  },
+  Tanzania: {
+    "fly-in-safaris": { title: "Fly-In Day Safaris" },
+    "multi-day-safaris": { title: "Multi-Day Safari Packages" },
   },
 };
 
 export const itinerariesCard = [
   {
     id: 1,
-    img: ThreeDays,
-    title: "Unforgettable 3-Day Adventure Tour Getaway",
-    url: "#",
+    img: "https://images.unsplash.com/photo-1614027164847-1b28caa1440c?auto=format&fit=crop&w=800&q=80",
+    title: "Unforgettable 3-Day Serengeti & Ngorongoro Tour",
+    url: "/services"
   },
   {
     id: 2,
-    img: FourDays,
-    title: "Exciting 4-Day Scenic Lake Tour Escape",
-    url: "#",
+    img: "https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=800&q=80",
+    title: "Exciting 2-Day Tarangire & Manyara Scenic Safari",
+    url: "/services"
   },
   {
     id: 3,
-    img: FiveDays,
-    title: "Thrilling 5-Day Wild Adventure Tour",
-    url: "#",
+    img: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80",
+    title: "Thrilling 5-Day Extended Northern Circuit Safari",
+    url: "/services"
   },
   {
     id: 4,
-    img: FourteenDays,
-    title: "Ultimate 14-Day Island Tour & Beach Escape",
-    url: "#",
+    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    title: "Ultimate Zanzibar Sandbank & Marine Dhow Excursion",
+    url: "/services"
   },
 ];
-
