@@ -1,7 +1,7 @@
-﻿import { MapPin, Phone, Mail } from "lucide-react";
-import { FaWhatsapp, FaFacebook, FaInstagram, FaTripadvisor } from "react-icons/fa";
+import { MapPin, Phone, Mail } from "lucide-react";
+import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 
 const WHATSAPP_PHONE = "255777000000";
@@ -9,9 +9,10 @@ const WHATSAPP_MSG = "Hello Zan Lungo Tours! I am checking your website and I wo
 
 const Footer = () => {
   const { lang, t } = useLanguage();
+  const location = useLocation();
 
   return (
-    <footer className="bg-[#1C2826] text-white relative overflow-hidden border-t border-[#D4AF37]/10">
+    <footer className="bg-[#1C2826] text-white relative overflow-hidden border-t border-[#D4AF37]/10 pb-8 sm:pb-4">
       {/* Background accents */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg className="absolute bottom-0 left-0 h-64 w-64" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -41,9 +42,6 @@ const Footer = () => {
               <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
                 <FaInstagram size={22} />
               </a>
-              <a href="https://www.tripadvisor.com/" aria-label="TripAdvisor" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
-                <FaTripadvisor size={22} />
-              </a>
               <a href="https://maps.google.com/?q=Stone+Town+Zanzibar" aria-label="Google Maps" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
                 <SiGooglemaps size={20} />
               </a>
@@ -59,11 +57,6 @@ const Footer = () => {
               <li><Link to="/" className="hover:text-[#D4AF37] transition-colors">{t("Home", "Home")}</Link></li>
               <li><Link to="/about" className="hover:text-[#D4AF37] transition-colors">{t("About Us", "Chi Siamo")}</Link></li>
               <li><Link to="/services" className="hover:text-[#D4AF37] transition-colors">{t("Our Services", "Servizi")}</Link></li>
-              <li>
-                <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
-                  <FaTripadvisor size={13} /> {t("TripAdvisor Reviews", "Recensioni TripAdvisor")}
-                </a>
-              </li>
               <li>
                 <a href="https://maps.google.com/?q=Stone+Town+Zanzibar" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
                   <SiGooglemaps size={12} /> {t("Find Us on Maps", "Trovaci su Maps")}
@@ -118,12 +111,22 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+        {/* Bottom Bar — sm:pr-28 gives 112px clearance from the floating QuickConnect buttons */}
+        <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4 relative z-20 sm:pr-28">
           <p>&copy; {new Date().getFullYear()} Zan Lungo Tour and Safari. {t("All rights reserved.", "Tutti i diritti riservati.")}</p>
-          <div className="flex gap-6">
-            <Link to="#" className="hover:text-white transition-colors">{t("Privacy Policy", "Privacy Policy")}</Link>
-            <Link to="#" className="hover:text-white transition-colors">{t("Terms of Service", "Termini di Servizio")}</Link>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/privacy"
+              className="text-gray-400 hover:text-[#D4AF37] transition-colors font-medium"
+            >
+              {t("Privacy Policy", "Privacy Policy")}
+            </Link>
+            <Link
+              to="/terms"
+              className="text-gray-400 hover:text-[#D4AF37] transition-colors font-medium"
+            >
+              {t("Terms of Service", "Termini di Servizio")}
+            </Link>
           </div>
         </div>
       </div>

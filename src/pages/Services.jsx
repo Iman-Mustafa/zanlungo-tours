@@ -1,17 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
 import QuickConnect from "../components/QuickConnect";
 import { servicesData } from "../data/servicesData";
 import { useLanguage } from "../context/LanguageContext";
-import { Car, Palmtree, Plane, Mountain } from "lucide-react";
 
 
 const TAB_CONFIG = [
   {
     id: "transfers",
-    icon: Car,
     labelEn: "Airport & Port Transfers",
     labelIt: "Trasferimenti",
     descEn: "Private air-conditioned vehicles. All hotels, all hours.",
@@ -19,7 +17,6 @@ const TAB_CONFIG = [
   },
   {
     id: "zanzibarTours",
-    icon: Palmtree,
     labelEn: "Zanzibar Day Tours",
     labelIt: "Tour Giornalieri Zanzibar",
     descEn: "16 unique excursions across the island.",
@@ -27,7 +24,6 @@ const TAB_CONFIG = [
   },
   {
     id: "flyInSafaris",
-    icon: Plane,
     labelEn: "Tanzania Fly-In Safaris",
     labelIt: "Safari in Volo Tanzania",
     descEn: "Same-day return flights into Selous or Mikumi.",
@@ -35,8 +31,6 @@ const TAB_CONFIG = [
   },
   {
     id: "multiDaySafaris",
-    icon: Mountain,
-
     labelEn: "Multi-Day Safari Packages",
     labelIt: "Safari di Più Giorni",
     descEn: "Serengeti, Ngorongoro, Tarangire, Lake Manyara and more.",
@@ -47,6 +41,34 @@ const TAB_CONFIG = [
 export default function Services() {
   const { lang, t } = useLanguage();
   const [activeTab, setActiveTab] = useState("zanzibarTours");
+  const tabContainerRef = useRef(null);
+  const tabRefs = useRef({});
+
+  const scrollToTab = (tabId) => {
+    const container = tabContainerRef.current;
+    const button = tabRefs.current[tabId];
+    if (container && button) {
+      const containerRect = container.getBoundingClientRect();
+      const buttonRect = button.getBoundingClientRect();
+      const offset = buttonRect.left - containerRect.left;
+      container.scrollTo({
+        left: container.scrollLeft + offset - 16,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+    scrollToTab(tabId);
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      scrollToTab(activeTab);
+    }, 150);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     document.title = t(
@@ -63,15 +85,14 @@ export default function Services() {
       <Navigation />
 
       {/* Page Hero */}
-      <section className="bg-[#1C2826] pt-28 pb-16 px-4 relative overflow-hidden">
+      <section className="bg-[#1C2826] pt-36 md:pt-40 pb-16 md:pb-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D4AF37] rounded-full blur-3xl" />
           <div className="absolute top-0 left-0 w-64 h-64 bg-[#D4AF37] rounded-full blur-3xl" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/20 rounded-full px-4 py-1.5 mb-4">
-            <span className="w-2 h-2 bg-[#D4AF37] rounded-full"></span>
-            <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">
+          <div className="inline-flex items-center bg-[#1C2826] border border-[#D4AF37]/40 rounded-xl px-5 py-2.5 shadow-lg mb-4">
+            <span className="text-xs font-extrabold text-[#D4AF37] uppercase tracking-wider">
               {t("Service Catalog", "Catalogo Servizi")}
             </span>
           </div>
@@ -90,21 +111,23 @@ export default function Services() {
       {/* Tab Navigation */}
       <div className="bg-white border-b border-gray-100 sticky top-[72px] z-30 shadow-sm">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex gap-1 overflow-x-auto py-3 scrollbar-none">
+          <div
+            ref={tabContainerRef}
+            className="flex gap-2 overflow-x-auto py-3 scrollbar-none scroll-smooth"
+          >
             {TAB_CONFIG.map((tab) => {
-              const Icon = tab.icon;
               const isActive = activeTab === tab.id;
               return (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all flex-shrink-0 ${
+                  ref={(el) => (tabRefs.current[tab.id] = el)}
+                  onClick={() => handleTabClick(tab.id)}
+                  className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all flex-shrink-0 ${
                     isActive
                       ? "bg-[#1C2826] text-white shadow-md"
                       : "bg-gray-50 text-gray-600 hover:bg-gray-100 border border-gray-200"
                   }`}
                 >
-                  <Icon size={13} />
                   {lang === "en" ? tab.labelEn : tab.labelIt}
                 </button>
               );
