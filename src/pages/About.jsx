@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import QuickConnect from "../components/QuickConnect";
 import { useLanguage } from "../context/LanguageContext";
-import { ShieldCheck, Check, Phone, Mail } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WHATSAPP_PHONE = "255777000000";
@@ -141,16 +141,13 @@ export default function About() {
 
         {/* Commitments Card */}
         <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-5">
-          <h3 className="text-lg font-bold text-[#1C2826] flex items-center gap-2">
-            <ShieldCheck className="text-emerald-600" size={20} />
+          <h3 className="text-lg font-bold text-[#1C2826]">
             {c.badgeTitle}
           </h3>
           <div className="space-y-3">
             {c.points.map((pt, idx) => (
-              <div key={idx} className="flex items-start gap-3">
-                <div className="bg-emerald-100 text-emerald-700 p-0.5 rounded-full mt-0.5 flex-shrink-0">
-                  <Check size={13} />
-                </div>
+              <div key={idx} className="flex items-start gap-2.5">
+                <span className="text-[#D4AF37] font-bold text-base leading-none mt-0.5 select-none">•</span>
                 <span className="text-gray-700 text-sm font-medium">{pt}</span>
               </div>
             ))}
