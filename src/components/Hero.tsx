@@ -5,12 +5,13 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 
-const WHATSAPP_PHONE = "255777000000";
+const WHATSAPP_PHONE = "255778670092";
 
-// Local images (public/images) — avoids broken remote hotlinks
-const HERO_SAFARI = "/images/hero-serengeti.jpg";
-const HERO_ZANZIBAR = "/images/hero-zanzibar.jpg";
-const HERO_FLYIN = "/images/hero-flyin.jpg";
+// Real photography from ZANLUNGO converted to high-performance WebP
+const HERO_SAFARI = "/images/hero-serengeti.webp"; // Real safari jeep with Capitano Lungo & pride of lions
+const HERO_ZANZIBAR = "/images/hero-zanzibar.webp"; // Real dhow cruise on turquoise ocean
+const HERO_FLYIN = "/images/hero-flyin.webp"; // Real Mikumi National Park Hippo Pool
+const HERO_SANDBANK = "/images/hero-sandbank.webp"; // Real Nakupenda sandbank & blue waters
 
 const slidesData = {
   en: [
@@ -19,21 +20,28 @@ const slidesData = {
       tagline: "Karibu Zan Lungo Tours & Safaris",
       title: "Unleash the Spirit of the Wild",
       description:
-        "Embark on unforgettable adventures—from thrilling overland game drives across Serengeti and Ngorongoro to private transfers crafted just for you.",
+        "Embark on authentic adventures with local guide Capitano Lungo—from thrilling game drives across Serengeti, Ngorongoro, and Mikumi to tailored private excursions.",
     },
     {
       image: HERO_ZANZIBAR,
-      tagline: "Zanzibar Day Tours & Transfers",
+      tagline: "Zanzibar Day Tours & Marine Cruises",
       title: "Escape to Pristine Paradises",
       description:
-        "Explore historical Stone Town, relax on the Nakupenda sandbanks, and dive into the iconic Safari Blue marine excursions with local experts.",
+        "Sail aboard traditional wooden dhows, explore Mnemba Atoll with dolphins, and dive into authentic Safari Blue marine excursions.",
+    },
+    {
+      image: HERO_SANDBANK,
+      tagline: "Nakupenda & Sandbank Experiences",
+      title: "Crystal Waters & Fresh Feasts",
+      description:
+        "Relax on white sandbanks disappearing into turquoise tides while enjoying fresh tropical fruits and barbecued seafood prepared on-site.",
     },
     {
       image: HERO_FLYIN,
       tagline: "Mainland Fly-In Safaris",
       title: "Every Animal Has a Story",
       description:
-        "Take a same-day return flight from Zanzibar straight into Nyerere National Park (Selous) or Mikumi for an unmatched wildlife viewing experience.",
+        "Take a seamless same-day or multi-day return flight from Zanzibar straight into Mikumi or Nyerere (Selous) for an unmatched wildlife encounter.",
     },
   ],
   it: [
@@ -42,21 +50,28 @@ const slidesData = {
       tagline: "Benvenuti a Zan Lungo Tours & Safaris",
       title: "Sveglia lo Spirito Selvaggio",
       description:
-        "Parti per avventure indimenticabili—dai brividi dei game drive nel Serengeti e Ngorongoro ai trasferimenti privati su misura per te.",
+        "Parti per avventure autentiche con la guida locale Capitano Lungo—dai safari nel Serengeti e Ngorongoro fino a Mikumi con veicoli 4x4 dedicati.",
     },
     {
       image: HERO_ZANZIBAR,
-      tagline: "Tour Giornalieri & Trasferimenti Zanzibar",
+      tagline: "Tour Giornalieri & Escursioni Marine",
       title: "Fuggi in Paradisi Incontaminati",
       description:
-        "Esplora la storica Stone Town, rilassati sulle lingue di sabbia di Nakupenda e tuffati nelle iconiche escursioni marine Safari Blue.",
+        "Naviga a bordo di dhow tradizionali, scopri l'atollo di Mnemba con i delfini e vivi l'iconica escursione marina Safari Blue.",
+    },
+    {
+      image: HERO_SANDBANK,
+      tagline: "Esperienze Nakupenda & Lingue di Sabbia",
+      title: "Acque Cristalline & Frutta Tropicale",
+      description:
+        "Rilassati sulle lingue di sabbia bianca circondate da acque turchesi gustando frutta fresca tropicale e pesce alla griglia.",
     },
     {
       image: HERO_FLYIN,
       tagline: "Safari in Volo dalla Tanzania Continentale",
       title: "Ogni Animale ha una Storia",
       description:
-        "Prendi un volo di andata e ritorno in giornata da Zanzibar direttamente nel Parco Nazionale Nyerere (Selous) o Mikumi per un'esperienza wildlife unica.",
+        "Vola direttamente da Zanzibar verso Mikumi o Nyerere (Selous) per un incontro indimenticabile a contatto con la grande fauna africana.",
     },
   ],
 };

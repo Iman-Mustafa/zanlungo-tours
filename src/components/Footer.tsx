@@ -4,8 +4,8 @@ import { SiGooglemaps } from "react-icons/si";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 
-const WHATSAPP_PHONE = "255777000000";
-const WHATSAPP_MSG = "Hello Zan Lungo Tours! I am checking your website and I would like to inquire about your packages.";
+const WHATSAPP_PHONE = "255778670092";
+const WHATSAPP_MSG = "Hello Zanlungo Tour and Safaris! I am checking your website and I would like to inquire about your packages.";
 
 const Footer = () => {
   const { lang, t } = useLanguage();
@@ -25,8 +25,15 @@ const Footer = () => {
 
           {/* Brand */}
           <div className="space-y-4">
-            <div className="text-xl font-black tracking-wider text-[#D4AF37]">
-              ZAN LUNGO <span className="text-white font-light text-xs block tracking-widest">TOURS & SAFARIS</span>
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/logo.webp"
+                alt="Zanlungo Tour and Safaris"
+                className="h-14 w-14 object-contain rounded-full shadow-md bg-white/5 p-1"
+              />
+              <div className="text-xl font-black tracking-wider text-[#D4AF37] leading-tight">
+                ZAN LUNGO <span className="text-white font-light text-xs block tracking-widest">TOURS & SAFARIS</span>
+              </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-light">
               {t(
@@ -36,10 +43,10 @@ const Footer = () => {
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4 pt-2">
-              <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
+              <a href="https://www.facebook.com/search/top?q=Zanlungo%20Zanzibar%20Tour%20%26%20Safaris" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
                 <FaFacebook size={22} />
               </a>
-              <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
+              <a href="https://www.instagram.com/zanlungo_zanzibar_tours/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
                 <FaInstagram size={22} />
               </a>
               <a href="https://maps.google.com/?q=Stone+Town+Zanzibar" aria-label="Google Maps" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
@@ -90,7 +97,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-[#D4AF37] flex-shrink-0" />
-                <a href="tel:+255777000000" className="hover:text-[#D4AF37] transition-colors">+255 777 000 000</a>
+                <a href="tel:+255778670092" className="hover:text-[#D4AF37] transition-colors">+255 778 670 092</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-[#D4AF37] flex-shrink-0" />

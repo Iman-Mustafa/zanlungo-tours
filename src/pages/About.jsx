@@ -6,46 +6,46 @@ import { useLanguage } from "../context/LanguageContext";
 import { Phone, Mail } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const WHATSAPP_PHONE = "255777000000";
+const WHATSAPP_PHONE = "255778670092";
 
 const content = {
   en: {
     heading: "Who We Are",
-    sub: "Local Tanzanian experts specializing in seamless tourist ground logistics and breathtaking safari coordination.",
+    sub: "Local Tanzanian experts led by Capitano Lungo, specializing in authentic Zanzibar excursions and mainland safari expeditions.",
     desc1:
-      "Zan Lungo Tour and Safari is a premier fully licensed agency operating out of Zanzibar. We cater specifically to international travelers who expect precision, security, and exceptional storytelling during their holidays.",
+      "Zanlungo Tour and Safaris is a premier, fully licensed local agency born and operating in Zanzibar. Guided by Capitano Lungo, with over 10 years of personal experience guiding international travelers, we take pride in offering genuine hospitality and unforgettable memories.",
     desc2:
-      "Our modern fleets are completely air-conditioned, and our expert team stands ready 24/7 to coordinate instant hotel pickups and national park entries without delays.",
+      "From tranquil Dhow cruises across Mnemba Island and Nakupenda Sandbank to thrilling game drives in Serengeti, Ngorongoro, and Mikumi, our team coordinates every detail 24/7 with reliable, air-conditioned transport and fluent bilingual guidance.",
     badgeTitle: "Our Direct Commitments",
     points: [
-      "Certified Multi-lingual Guides (English & Italiano)",
-      "Instant WhatsApp Communication Support",
+      "Led by local guide Capitano Lungo (10+ years experience)",
+      "Fluent bilingual guidance (English & Italiano)",
+      "Instant WhatsApp Communication (+255 778 670 092)",
       "Transparent Fixed Pricing – No Hidden Fees",
-      "Air-conditioned modern safari and port vehicles",
-      "24/7 coordination for pickups and schedule changes",
-      "All Zanzibar hotel zones covered",
+      "Air-conditioned modern vehicles & private safari 4x4s",
+      "24/7 coordination for pickups and schedule tracking",
     ],
     statsLabel: ["Years Experience", "Happy Clients", "Destinations", "Languages"],
-    statsVal: ["8+", "2000+", "15+", "2"],
+    statsVal: ["10+", "2500+", "15+", "2"],
   },
   it: {
     heading: "Chi Siamo",
-    sub: "Esperti locali tanzaniani specializzati nella logistica turistica e nel coordinamento di safari mozzafiato.",
+    sub: "Esperti locali tanzaniani guidati da Capitano Lungo, specializzati in escursioni autentiche a Zanzibar e safari mozzafiato in Tanzania.",
     desc1:
-      "Zan Lungo Tour and Safari è un'agenzia leader con licenza completa che opera a Zanzibar. Ci rivolgiamo in particolare ai viaggiatori internazionali che si aspettano precisione, sicurezza e narrazione eccezionale.",
+      "Zanlungo Tour and Safaris è un'agenzia locale autorizzata con sede a Zanzibar. Guidata da Capitano Lungo, nato sull'isola con oltre 10 anni di esperienza nell'accompagnare viaggiatori internazionali, offriamo un'accoglienza calorosa e ricordi indimenticabili.",
     desc2:
-      "Le nostre flotte moderne sono completamente climatizzate e il nostro team di esperti è pronto 24 ore su 24, 7 giorni su 7 per coordinare i ritiri istantanei in hotel e gli ingressi ai parchi nazionali.",
+      "Dalle navigazioni su dhow verso Mnemba e la lingua di sabbia di Nakupenda fino ai safari nel Serengeti, Ngorongoro e Mikumi, coordiniamo ogni dettaglio 24/7 con veicoli climatizzati e assistenza continua.",
     badgeTitle: "I Nostri Impegni Diretti",
     points: [
-      "Guide certificate multilingue (Inglese e Italiano)",
-      "Supporto istantaneo su WhatsApp",
-      "Prezzi fissi trasparenti – Nessun costo nascosto",
-      "Veicoli moderni climatizzati per safari e porto",
-      "Coordinamento 24/7 per pickup e variazioni di orario",
-      "Tutte le zone hotel di Zanzibar coperte",
+      "Guidati da Capitano Lungo (oltre 10 anni di esperienza)",
+      "Guide bilingue fluenti (Italiano e Inglese)",
+      "Supporto istantaneo su WhatsApp (+255 778 670 092)",
+      "Prezzi fissi e trasparenti – Nessuna sorpresa",
+      "Veicoli moderni climatizzati e fuoristrada 4x4",
+      "Coordinamento 24/7 con monitoraggio voli e ritiri",
     ],
     statsLabel: ["Anni di Esperienza", "Clienti Soddisfatti", "Destinazioni", "Lingue"],
-    statsVal: ["8+", "2000+", "15+", "2"],
+    statsVal: ["10+", "2500+", "15+", "2"],
   },
 };
 
@@ -123,11 +123,11 @@ export default function About() {
               {t("Chat on WhatsApp", "Chatta su WhatsApp")}
             </button>
             <a
-              href="tel:+255777000000"
+              href="tel:+255778670092"
               className="flex items-center justify-center gap-2 bg-[#1C2826] hover:bg-[#1C2826]/80 text-white px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-sm"
             >
               <Phone size={13} />
-              +255 777 000 000
+              +255 778 670 092
             </a>
             <a
               href="mailto:info@zanlungotours.com"
@@ -151,6 +151,68 @@ export default function About() {
                 <span className="text-gray-700 text-sm font-medium">{pt}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Real Moments Gallery */}
+      <section className="max-w-7xl mx-auto px-4 pb-20">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <span className="text-xs font-black uppercase text-[#D4AF37] tracking-widest block mb-2">
+            {t("Moments That Last Forever", "Momenti Che Restano Nel Cuore")}
+          </span>
+          <h2 className="text-2xl md:text-3xl font-black text-[#1C2826] uppercase">
+            {t("Authentic Moments with Capitano Lungo", "Momenti Autentici con Capitano Lungo")}
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="group relative rounded-2xl overflow-hidden shadow-md aspect-[3/4] bg-gray-100">
+            <img
+              src="/images/capitano-lungo-beach.webp"
+              alt="Capitano Lungo on the beach with guests"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <p className="text-white text-xs font-bold">{t("Sunset at Kendwa Beach", "Tramonto sulla Spiaggia di Kendwa")}</p>
+            </div>
+          </div>
+
+          <div className="group relative rounded-2xl overflow-hidden shadow-md aspect-[3/4] bg-gray-100">
+            <img
+              src="/images/welcome-safari.webp"
+              alt="Safari game drive observing pride of lions"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <p className="text-white text-xs font-bold">{t("Lion Encounter on Safari Drive", "Incontro con i Leoni in Safari")}</p>
+            </div>
+          </div>
+
+          <div className="group relative rounded-2xl overflow-hidden shadow-md aspect-[3/4] bg-gray-100">
+            <img
+              src="/images/card-safari-blue.webp"
+              alt="Dhow sailing cruise on turquoise ocean"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <p className="text-white text-xs font-bold">{t("Private Dhow Marine Cruise", "Crociera Privata in Barca Dhow")}</p>
+            </div>
+          </div>
+
+          <div className="group relative rounded-2xl overflow-hidden shadow-md aspect-[3/4] bg-gray-100">
+            <img
+              src="/images/card-flyin.webp"
+              alt="Mikumi National Park Hippo Pool"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <p className="text-white text-xs font-bold">{t("Mikumi Hippo Pool Expedition", "Spedizione Hippo Pool a Mikumi")}</p>
+            </div>
           </div>
         </div>
       </section>

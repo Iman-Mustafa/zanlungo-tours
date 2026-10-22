@@ -1,26 +1,26 @@
 export const SERVICE_IMAGES = {
-  "znz-airport-transfer": "/images/card-transfer.jpg",
-  "stone-town-tour": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+  "znz-airport-transfer": "/images/card-transfer.webp",
+  "stone-town-tour": "/images/IMG-20261017-WA0045.webp", // Stone town harbor crossing
   "spice-farm-tour": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80",
   "prison-island-tour": "https://images.unsplash.com/photo-1518467166778-b88f373ffec7?auto=format&fit=crop&w=800&q=80",
-  "nakupenda-sandbank": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-  "safari-blue": "/images/card-safari-blue.jpg",
+  "nakupenda-sandbank": "/images/card-nakupenda.webp", // Real Nakupenda sandbank
+  "safari-blue": "/images/card-safari-blue.webp", // Real Safari Blue dhow cruise
   "jozani-forest": "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=800&q=80",
   "rock-restaurant": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=800&q=80",
   "mtende-beach": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80",
   "salaam-cave": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-  "nungwi-kendwa-beach": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80",
+  "nungwi-kendwa-beach": "/images/IMG-20261017-WA0044.webp", // Pristine Zanzibar shallow ocean
   "baraka-aquarium": "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=800&q=80",
-  "sunset-dhow-cruise": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80",
-  "village-tour": "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&w=800&q=80",
+  "sunset-dhow-cruise": "/images/capitano-lungo-beach.webp", // Real Kendwa sunset with Capitano
+  "village-tour": "/images/card-village.webp", // Real village & school visit
   "quad-adventure": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
   "kuza-cave": "https://images.unsplash.com/photo-1508873696983-2df57046475a?auto=format&fit=crop&w=800&q=80",
   "maalum-cave": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80",
-  "selous-fly-in": "/images/card-flyin.jpg",
-  "mikumi-fly-in": "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=800&q=80",
-  "serengeti-ngorongoro-3d": "/images/card-serengeti.jpg",
-  "tarangire-manyara-2d": "https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=800&q=80",
-  "serengeti-5d": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80",
+  "selous-fly-in": "/images/IMG-20261017-WA0028.webp", // Real safari drive with pride of lions
+  "mikumi-fly-in": "/images/card-flyin.webp", // Real Mikumi Hippo Pool
+  "serengeti-ngorongoro-3d": "/images/card-serengeti.webp", // Real safari jeep with resting lions
+  "tarangire-manyara-2d": "/images/IMG-20261017-WA0029.webp", // Real lion cubs by pool
+  "serengeti-5d": "/images/IMG-20261017-WA0038.webp", // Real Dhow sailing excursion
 };
 
 export const servicesData = {

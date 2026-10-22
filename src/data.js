@@ -12,7 +12,7 @@ export const itineraryData = {
 export const itinerariesCard = [
   {
     id: "transfers-card",
-    img: "/images/card-transfer.jpg",
+    img: "/images/card-transfer.webp",
     categoryEn: "Airport Transfers",
     categoryIt: "Trasferimenti",
     durationEn: "24/7 Flexible",
@@ -25,7 +25,7 @@ export const itinerariesCard = [
   },
   {
     id: "zanzibar-tour-card",
-    img: "/images/card-safari-blue.jpg",
+    img: "/images/card-safari-blue.webp",
     categoryEn: "Zanzibar Day Tours",
     categoryIt: "Tour Giornalieri",
     durationEn: "Full Day",
@@ -38,7 +38,7 @@ export const itinerariesCard = [
   },
   {
     id: "flyin-safari-card",
-    img: "/images/card-flyin.jpg",
+    img: "/images/card-flyin.webp",
     categoryEn: "Fly-In Safaris",
     categoryIt: "Safari in Volo",
     durationEn: "1 Day Return",
@@ -51,7 +51,7 @@ export const itinerariesCard = [
   },
   {
     id: "serengeti-safari-card",
-    img: "/images/card-serengeti.jpg",
+    img: "/images/card-serengeti.webp",
     categoryEn: "Multi-Day Safaris",
     categoryIt: "Safari di Più Giorni",
     durationEn: "3 Days / 2 Nights",

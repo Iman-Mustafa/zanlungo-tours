@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Compass, Globe } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
@@ -22,10 +22,11 @@ const Navigation = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center justify-between h-[72px]">
             {/* Brand Logo */}
-            <Link to="/" className="flex items-center gap-2 group">
-              <Compass
-                className="text-[#D4AF37] transition-transform duration-700 group-hover:rotate-180"
-                size={24}
+            <Link to="/" className="flex items-center gap-3 group">
+              <img
+                src="/images/logo.webp"
+                alt="Zanlungo Tour and Safaris"
+                className="h-11 w-11 object-contain rounded-full shadow-sm group-hover:scale-105 transition-transform duration-300"
               />
               <span className="text-lg font-black tracking-wider text-[#1C2826] leading-none">
                 ZAN LUNGO
@@ -105,8 +106,12 @@ const Navigation = () => {
       >
         {/* Sidebar Header */}
         <div className="flex items-center justify-between p-5 border-b border-gray-100">
-          <Link to="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-2">
-            <Compass className="text-[#D4AF37]" size={20} />
+          <Link to="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-2.5">
+            <img
+              src="/images/logo.webp"
+              alt="Zanlungo Tour and Safaris"
+              className="h-9 w-9 object-contain rounded-full shadow-sm"
+            />
             <span className="text-base font-black tracking-wider text-[#1C2826]">ZAN LUNGO</span>
           </Link>
           <button

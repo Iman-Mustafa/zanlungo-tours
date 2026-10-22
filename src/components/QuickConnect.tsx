@@ -2,15 +2,15 @@ import { Phone, Mail } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useLanguage } from "../context/LanguageContext";
 
-const WHATSAPP_PHONE = "255777000000";
+const WHATSAPP_PHONE = "255778670092";
 
 const QuickConnect = () => {
   const { lang, t } = useLanguage();
 
   const handleWhatsApp = () => {
     const msg = t(
-      "Hello Zan Lungo Tours! I found you online and would like to make an inquiry.",
-      "Ciao Zan Lungo Tours! Vi ho trovato online e vorrei fare una richiesta."
+      "Hello Zanlungo Tour and Safaris! I found you online and would like to make an inquiry.",
+      "Ciao Zanlungo Tour and Safaris! Vi ho trovato online e vorrei fare una richiesta."
     );
     window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`, "_blank");
   };
@@ -30,7 +30,7 @@ const QuickConnect = () => {
 
       {/* Call button */}
       <a
-        href="tel:+255777000000"
+        href="tel:+255778670092"
         aria-label="Call us"
         title={t("Call Us", "Chiamaci")}
         className="pointer-events-auto flex items-center justify-center w-12 h-12 bg-[#1C2826] hover:bg-[#D4AF37] text-white rounded-full shadow-xl transition-all duration-200 active:scale-95"

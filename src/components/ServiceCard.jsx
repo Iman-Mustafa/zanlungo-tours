@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const WHATSAPP_PHONE = "255777000000";
+const WHATSAPP_PHONE = "255778670092";
 
 export default function ServiceCard({ service, lang }) {
   const [travelDate, setTravelDate] = useState("");

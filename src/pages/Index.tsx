@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Welcome from "../components/Welcome";
 import Footer from "../components/Footer";
 import ImageCard from "@/components/ImageCard";
+import VideoExperience from "../components/VideoExperience";
 import QuickConnect from "../components/QuickConnect";
 import { useLanguage } from "../context/LanguageContext";
 import { itinerariesCard } from "../data";
@@ -51,6 +52,9 @@ const Index = () => {
 
       {/* Localized Welcome introduction layout with real wildlife photography */}
       <Welcome />
+
+      {/* Real Live Video Footage Showcase */}
+      <VideoExperience />
 
       {/* Curated tours & excursion catalog grid */}
       <section className="relative py-24 bg-white border-t border-gray-100">

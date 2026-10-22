@@ -159,6 +159,84 @@ export default function Services() {
             ))}
           </div>
         )}
+
+        {/* Official Excursion Brochures from Capitano Lungo */}
+        <div className="mt-20 bg-gradient-to-br from-[#1C2826] to-[#141E1C] rounded-3xl p-8 md:p-12 text-white border border-[#D4AF37]/30 shadow-2xl">
+          <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+            <span className="text-xs font-black uppercase text-[#D4AF37] tracking-widest block">
+              {t("Official Field Program", "Programma Ufficiale delle Escursioni")}
+            </span>
+            <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-white">
+              {t("Zanlungo Tour & Safaris Official Brochures", "Brochure Ufficiali Zanlungo Tour & Safaris")}
+            </h2>
+            <p className="text-gray-300 text-xs md:text-sm font-light">
+              {t(
+                "Created directly by Capitano Lungo. View the complete itinerary details for Zanzibar island excursions and Mnemba marine trips.",
+                "Create direttamente da Capitano Lungo. Consulta i dettagli completi degli itinerari per le escursioni a Zanzibar e a Mnemba."
+              )}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
+            {/* Brochure 1: Excursions list */}
+            <div className="bg-white/5 rounded-2xl p-4 border border-white/10 group hover:border-[#D4AF37]/60 transition-all duration-300">
+              <div className="rounded-xl overflow-hidden aspect-[4/3] bg-black/40 mb-4 shadow-lg">
+                <img
+                  src="/images/brochure-excursions.webp"
+                  alt="Zanlungo Zanzibar Tour and Safaris Excursions List"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-base font-bold text-white mb-1">
+                {t("9 Classic Zanzibar Excursions", "9 Escursioni Classiche a Zanzibar")}
+              </h3>
+              <p className="text-xs text-gray-400 mb-4 font-light">
+                {t(
+                  "Stone Town, Nakupenda, Mnemba, Safari Blue, Jozani Forest, Kendwa Sunset, Quad & Safari.",
+                  "Stone Town, Nakupenda, Mnemba, Safari Blu, Foresta Jozani, Tramonto a Kendwa, Quad e Safari."
+                )}
+              </p>
+              <a
+                href="https://wa.me/255778670092?text=Hello%20Capitano%20Lungo!%20I%20would%20like%20to%20book%20one%20of%20your%209%20Zanzibar%20excursions."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full bg-[#D4AF37] hover:bg-[#c49f2f] text-[#1C2826] font-bold py-2.5 px-4 rounded-xl text-xs uppercase tracking-wider transition"
+              >
+                {t("Inquire on WhatsApp (+255 778 670 092)", "Richiedi su WhatsApp (+255 778 670 092)")}
+              </a>
+            </div>
+
+            {/* Brochure 2: Mnemba Island Tour */}
+            <div className="bg-white/5 rounded-2xl p-4 border border-white/10 group hover:border-[#D4AF37]/60 transition-all duration-300">
+              <div className="rounded-xl overflow-hidden aspect-[4/3] bg-black/40 mb-4 shadow-lg">
+                <img
+                  src="/images/brochure-mnemba.webp"
+                  alt="Mnemba Island Snorkeling & Dolphins Tour Brochure"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-base font-bold text-white mb-1">
+                {t("Mnemba Island & Dolphin Tour", "Tour Isola di Mnemba & Delfini")}
+              </h3>
+              <p className="text-xs text-gray-400 mb-4 font-light">
+                {t(
+                  "Kiwengwa to Muyuni Beach, boat excursion to Mnemba, coral snorkeling & tropical fruit feast.",
+                  "Da Kiwengwa a Muyuni Beach, escursione in barca a Mnemba, snorkeling nella barriera e frutta tropicale."
+                )}
+              </p>
+              <a
+                href="https://wa.me/255778670092?text=Hello%20Capitano%20Lungo!%20I%20would%20like%20to%20book%20the%20Mnemba%20Island%20Tour."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs uppercase tracking-wider transition"
+              >
+                {t("Book Mnemba Tour on WhatsApp", "Prenota Tour Mnemba su WhatsApp")}
+              </a>
+            </div>
+          </div>
+        </div>
       </main>
 
       <Footer />

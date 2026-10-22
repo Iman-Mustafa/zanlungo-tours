@@ -7,7 +7,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { Mail, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const WHATSAPP_PHONE = "255777000000";
+const WHATSAPP_PHONE = "255778670092";
 const LAST_UPDATED = { en: "October 2026", it: "Ottobre 2026" };
 
 /*
@@ -383,10 +383,10 @@ export default function Legal({ type = "privacy" }) {
                 <Mail size={13} /> info@zanlungotours.com
               </a>
               <a
-                href="tel:+255777000000"
+                href="tel:+255778670092"
                 className="flex items-center justify-center gap-2 border border-white/20 hover:border-[#D4AF37] text-white hover:text-[#D4AF37] px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition"
               >
-                <Phone size={13} /> +255 777 000 000
+                <Phone size={13} /> +255 778 670 092
               </a>
             </div>
           </div>
