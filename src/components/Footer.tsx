@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+﻿import { MapPin, Phone, Mail } from "lucide-react";
 import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import { Link, useLocation } from "react-router-dom";
@@ -126,7 +126,7 @@ const Footer = () => {
               to="/privacy"
               className="text-gray-400 hover:text-[#D4AF37] transition-colors font-medium"
             >
-              {t("Privacy Policy", "Privacy Policy")}
+              {t("Privacy Policies", "Privacy Policy")}
             </Link>
             <Link
               to="/terms"
