@@ -132,7 +132,7 @@ const Footer = () => {
               to="/terms"
               className="text-gray-400 hover:text-[#D4AF37] transition-colors font-medium"
             >
-              {t("Terms of Service", "Termini di Servizio")}
+              {t("Terms of Services", "Termini di Servizio")}
             </Link>
           </div>
         </div>
