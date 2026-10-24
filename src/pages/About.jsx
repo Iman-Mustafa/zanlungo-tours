@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import QuickConnect from "../components/QuickConnect";
 import { useLanguage } from "../context/LanguageContext";
-import { Phone, Mail } from "lucide-react";
+import { Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WHATSAPP_PHONE = "255778670092";
@@ -128,13 +128,6 @@ export default function About() {
             >
               <Phone size={13} />
               +255 778 670 092
-            </a>
-            <a
-              href="mailto:info@zanlungotours.com"
-              className="flex items-center justify-center gap-2 border border-gray-200 hover:border-[#D4AF37] text-gray-600 hover:text-[#D4AF37] px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition"
-            >
-              <Mail size={13} />
-              {t("Email Us", "Scrivici")}
             </a>
           </div>
         </div>

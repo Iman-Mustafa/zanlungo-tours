@@ -1,4 +1,4 @@
-﻿import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import { Link, useLocation } from "react-router-dom";
@@ -93,15 +93,11 @@ const Footer = () => {
             <ul className="space-y-4 text-sm font-light text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
-                <span>Stone Town, Zanzibar,<br />Tanzania, East Africa</span>
+                <span>Kiwengwa Beach Resort, Kiwengwa,<br />Zanzibar, Tanzania</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-[#D4AF37] flex-shrink-0" />
                 <a href="tel:+255778670092" className="hover:text-[#D4AF37] transition-colors">+255 778 670 092</a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-4 w-4 text-[#D4AF37] flex-shrink-0" />
-                <a href="mailto:info@zanlungotours.com" className="hover:text-[#D4AF37] transition-colors break-all">info@zanlungotours.com</a>
               </li>
               <li>
                 <a
